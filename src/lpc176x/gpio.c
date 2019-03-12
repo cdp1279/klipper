@@ -17,6 +17,12 @@
  * Pin mappings
  ****************************************************************/
 
+DECL_ENUMERATION_RANGE("pin", "P0.", GPIO(0, 0), 32);
+DECL_ENUMERATION_RANGE("pin", "P1.", GPIO(1, 0), 32);
+DECL_ENUMERATION_RANGE("pin", "P2.", GPIO(2, 0), 32);
+DECL_ENUMERATION_RANGE("pin", "P3.", GPIO(3, 0), 32);
+DECL_ENUMERATION_RANGE("pin", "P4.", GPIO(4, 0), 32);
+
 static LPC_GPIO_TypeDef * const digital_regs[] = {
     LPC_GPIO0, LPC_GPIO1, LPC_GPIO2, LPC_GPIO3, LPC_GPIO4
 };
