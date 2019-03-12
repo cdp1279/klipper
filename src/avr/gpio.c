@@ -12,6 +12,24 @@
 #include "pgm.h" // PROGMEM
 #include "sched.h" // sched_shutdown
 
+#ifdef PINA
+DECL_ENUMERATION_RANGE("pin", "PA", GPIO('A', 0), 8);
+#endif
+DECL_ENUMERATION_RANGE("pin", "PB", GPIO('B', 0), 8);
+DECL_ENUMERATION_RANGE("pin", "PC", GPIO('C', 0), 8);
+DECL_ENUMERATION_RANGE("pin", "PD", GPIO('D', 0), 8);
+#ifdef PINE
+DECL_ENUMERATION_RANGE("pin", "PE", GPIO('E', 0), 8);
+DECL_ENUMERATION_RANGE("pin", "PF", GPIO('F', 0), 8);
+#endif
+#ifdef PING
+DECL_ENUMERATION_RANGE("pin", "PG", GPIO('G', 0), 8);
+DECL_ENUMERATION_RANGE("pin", "PH", GPIO('H', 0), 8);
+DECL_ENUMERATION_RANGE("pin", "PJ", GPIO('J', 0), 8);
+DECL_ENUMERATION_RANGE("pin", "PK", GPIO('K', 0), 8);
+DECL_ENUMERATION_RANGE("pin", "PL", GPIO('L', 0), 8);
+#endif
+
 volatile uint8_t * const digital_regs[] PROGMEM = {
 #ifdef PINA
     &PINA,
