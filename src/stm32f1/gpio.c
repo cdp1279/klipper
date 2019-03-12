@@ -17,6 +17,12 @@
  * Pin mappings
  ****************************************************************/
 
+DECL_ENUMERATION_RANGE("pin", "PA", GPIO('A', 0), 16);
+DECL_ENUMERATION_RANGE("pin", "PB", GPIO('B', 0), 16);
+DECL_ENUMERATION_RANGE("pin", "PC", GPIO('C', 0), 16);
+DECL_ENUMERATION_RANGE("pin", "PD", GPIO('D', 0), 16);
+DECL_ENUMERATION_RANGE("pin", "PE", GPIO('E', 0), 16);
+
 GPIO_TypeDef *const digital_regs[] = {
     GPIOA, GPIOB, GPIOC, GPIOD, GPIOE
 };
